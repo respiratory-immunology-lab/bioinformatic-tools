@@ -29,6 +29,6 @@ These models, abbreviated as LMM models, offer an extension to simple linear mod
 
 ## Data visualisation
 
-* **[volcano3D](https://rdrr.io/cran/volcano3D/)**: Generates interactive plots for analysing and visualising three-class high dimensional data - it is particularly suited to visualising differences in continuous attributes such as gene/protein/biomarker expression levels between three groups. It can produce 3-way polar plots for easier interpretation of three-class data following prior differential abundance analysis testing (example below). An example of a 2x3 study design (responders and non-responders to 3 distinct drugs) is provided [here](https://katrionagoldmann.github.io/volcano3D/articles/Vignette_2x3.html).<br><div align="center"><img src="./assets/volcano3d_polarplot.png" width=75%></div>
+* **[volcano3D](https://rdrr.io/cran/volcano3D/)**: Generates interactive plots for analysing and visualising three-class high dimensional data - it is particularly suited to visualising differences in continuous attributes such as gene/protein/biomarker expression levels between three groups. It can produce 3-way polar plots for easier interpretation of three-class data following prior differential abundance analysis testing (example below). An example of a 2x3 study design (responders and non-responders to 3 distinct drugs) is provided [here](https://katrionagoldmann.github.io/volcano3D/articles/Vignette_2x3.html).<br><div align="center"><img src="./assets/volcano3d_polarplot.png" width=60%></div>
 
 ## Machine learning
