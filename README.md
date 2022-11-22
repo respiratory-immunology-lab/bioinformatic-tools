@@ -28,7 +28,7 @@ These models, abbreviated as LMM models, offer an extension to simple linear mod
   * Course notes from the package author ([here](https://mran.microsoft.com/snapshot/2018-08-24/web/packages/MCMCglmm/vignettes/CourseNotes.pdf)).
   * Intro to the MCMCglmm package for biologists ([here](https://ourcodingclub.github.io/tutorials/mcmcglmm/)).
 
-* **[glmmSeq](https://rdrr.io/cran/glmmSeq/)**: Uses mixed effects models to analyse longitudinal
+* **[glmmSeq](https://rdrr.io/cran/glmmSeq/)**: Uses mixed effects models to analyse longitudinal gene expression and highlight differences between sample groups over time. This package provides negative binomial and Gaussian mixed effects models to fit gene expression and other biological data across repeated samples. This fills a gap in many other differential gene expression tools that are unable to fit linear mixed models, and are less optimal for analysis of longitudinal data.
 
 ## Data visualisation
 
