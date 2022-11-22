@@ -4,6 +4,17 @@ Here we list number of packages that are useful for different aspects of the dat
 
 ## Table of Contents
 
+- [Bioinformatic Tools](#bioinformatic-tools)
+  - [Table of Contents](#table-of-contents)
+  - [Data modelling and differential abundance](#data-modelling-and-differential-abundance)
+    - [Model selection](#model-selection)
+    - [Linear models](#linear-models)
+    - [Linear mixed effect models](#linear-mixed-effect-models)
+    - [Spline models](#spline-models)
+  - [Data visualisation](#data-visualisation)
+  - [Machine learning](#machine-learning)
+
+
 ## Data modelling and differential abundance
 
 ### Model selection
@@ -28,7 +39,11 @@ These models, abbreviated as LMM models, offer an extension to simple linear mod
   * Course notes from the package author ([here](https://mran.microsoft.com/snapshot/2018-08-24/web/packages/MCMCglmm/vignettes/CourseNotes.pdf)).
   * Intro to the MCMCglmm package for biologists ([here](https://ourcodingclub.github.io/tutorials/mcmcglmm/)).
 
-* **[glmmSeq](https://rdrr.io/cran/glmmSeq/)**: Uses mixed effects models to analyse longitudinal gene expression and highlight differences between sample groups over time. This package provides negative binomial and Gaussian mixed effects models to fit gene expression and other biological data across repeated samples. This fills a gap in many other differential gene expression tools that are unable to fit linear mixed models, and are less optimal for analysis of longitudinal data.
+* **[glmmSeq](https://rdrr.io/cran/glmmSeq/)**: Uses mixed effects models to analyse longitudinal gene expression and highlight differences between sample groups over time. This package provides negative binomial and Gaussian mixed effects models to fit gene expression and other biological data across repeated samples (example manuscript [here](https://www.nature.com/articles/s41591-022-01789-0)). This fills a gap in many other differential gene expression tools that are unable to fit linear mixed models, and are less optimal for analysis of longitudinal data.
+
+### Spline models
+
+* **[MetaLonDA](https://github.com/aametwally/MetaLonDA)**: MetaLonDA stands for "metagenomic longitudinal differential abundance method". It identifies the significant time intervals of microbial features in longitudinal studies, and is able to handle common inconsistencies such as variable sample collection times and uneven number of time points along the subjects' longitudinal study. It employs a negative binomial distribution in conjunction with a semi-parametric SS-ANOVA to model the read counts and performs significance teseting based on unit time intervals in a permutational manner.<br><div align="center"><img src="./assets/metalonda_ex.jpg"></div>
 
 ## Data visualisation
 
