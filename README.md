@@ -11,6 +11,8 @@ Here we list number of packages that are useful for different aspects of the dat
     - [Linear models](#linear-models)
     - [Linear mixed effect models](#linear-mixed-effect-models)
     - [Spline models](#spline-models)
+  - [Pathway analysis](#pathway-analysis)
+    - [Gene set enrichment](#gene-set-enrichment)
   - [Data visualisation](#data-visualisation)
   - [Machine learning](#machine-learning)
 
@@ -44,6 +46,12 @@ These models, abbreviated as LMM models, offer an extension to simple linear mod
 ### Spline models
 
 * **[MetaLonDA](https://github.com/aametwally/MetaLonDA)**: MetaLonDA stands for "metagenomic longitudinal differential abundance method". It identifies the significant time intervals of microbial features in longitudinal studies, and is able to handle common inconsistencies such as variable sample collection times and uneven number of time points along the subjects' longitudinal study. It employs a negative binomial distribution in conjunction with a semi-parametric SS-ANOVA to model the read counts and performs significance teseting based on unit time intervals in a permutational manner.<br><div align="center"><img src="./assets/metalonda_ex.jpg"></div>
+
+## Pathway analysis
+
+### Gene set enrichment
+
+* **[QuSAGE](https://rdrr.io/bioc/qusage/)**: QuSAGE stands for "quantitative set analysis for gene expression", and is a novel gene set enrichment-type test. It is designed to provide faster, more accurate, and eaiser to understand test for gene expression studies. QuSAGE accounts for inter-gene correlations using a [variance inflation factor](https://en.wikipedia.org/wiki/Variance_inflation_factor) technique, a quantifies gene set activity with a complete [probability density function](https://en.wikipedia.org/wiki/Probability_density_function) (from which p-values and confidence intervals are easily extracted). The package also includes a mixed-effects model implementation and meta-analysis framework. An introduction and examples can be found [here](https://rdrr.io/bioc/qusage/f/inst/doc/qusage.pdf).
 
 ## Data visualisation
 
