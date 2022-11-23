@@ -13,6 +13,10 @@ Here we list number of packages that are useful for different aspects of the dat
     - [Spline models](#spline-models)
   - [Pathway analysis](#pathway-analysis)
     - [Gene set enrichment](#gene-set-enrichment)
+    - [Functional enrichment network](#functional-enrichment-network)
+  - [Cell deconvolution](#cell-deconvolution)
+  - [Ligand-receptor pairs](#ligand-receptor-pairs)
+  - [Co-expression networks](#co-expression-networks)
   - [Data visualisation](#data-visualisation)
   - [Machine learning](#machine-learning)
 
@@ -45,13 +49,35 @@ These models, abbreviated as LMM models, offer an extension to simple linear mod
 
 ### Spline models
 
-* **[MetaLonDA](https://github.com/aametwally/MetaLonDA)**: MetaLonDA stands for "metagenomic longitudinal differential abundance method". It identifies the significant time intervals of microbial features in longitudinal studies, and is able to handle common inconsistencies such as variable sample collection times and uneven number of time points along the subjects' longitudinal study. It employs a negative binomial distribution in conjunction with a semi-parametric SS-ANOVA to model the read counts and performs significance teseting based on unit time intervals in a permutational manner.<br><div align="center"><img src="./assets/metalonda_ex.jpg"></div>
+* **[MetaLonDA](https://github.com/aametwally/MetaLonDA)**: MetaLonDA stands for "metagenomic longitudinal differential abundance method". It identifies the significant time intervals of microbial features in longitudinal studies, and is able to handle common inconsistencies such as variable sample collection times and uneven number of time points along the subjects' longitudinal study. It employs a negative binomial distribution in conjunction with a semi-parametric SS-ANOVA to model the read counts and performs significance testing based on unit time intervals in a permutational manner.<br><div align="center"><img src="./assets/metalonda_ex.jpg"></div>
 
 ## Pathway analysis
 
 ### Gene set enrichment
 
-* **[QuSAGE](https://rdrr.io/bioc/qusage/)**: QuSAGE stands for "quantitative set analysis for gene expression", and is a novel gene set enrichment-type test. It is designed to provide faster, more accurate, and eaiser to understand test for gene expression studies. QuSAGE accounts for inter-gene correlations using a [variance inflation factor](https://en.wikipedia.org/wiki/Variance_inflation_factor) technique, a quantifies gene set activity with a complete [probability density function](https://en.wikipedia.org/wiki/Probability_density_function) (from which p-values and confidence intervals are easily extracted). The package also includes a mixed-effects model implementation and meta-analysis framework. An introduction and examples can be found [here](https://rdrr.io/bioc/qusage/f/inst/doc/qusage.pdf).
+* **[QuSAGE](https://rdrr.io/bioc/qusage/)**: QuSAGE stands for "quantitative set analysis for gene expression", and is a novel gene set enrichment-type test. It is designed to provide faster, more accurate, and easier to understand test for gene expression studies. QuSAGE accounts for inter-gene correlations using a [variance inflation factor](https://en.wikipedia.org/wiki/Variance_inflation_factor) technique, a quantifies gene set activity with a complete [probability density function](https://en.wikipedia.org/wiki/Probability_density_function) (from which p-values and confidence intervals are easily extracted). The package also includes a mixed-effects model implementation and meta-analysis framework. An introduction and examples can be found [here](https://rdrr.io/bioc/qusage/f/inst/doc/qusage.pdf).
+
+### Functional enrichment network
+
+* **[clusterProfiler](https://rdrr.io/bioc/clusterProfiler/)**: This package implements methods to analyse and visualise functional profiles (GO and KEGG) of gene and gene clusters. It is discussed along with [enrichplot](https://rdrr.io/bioc/enrichplot/) in a guide by the author [here](https://yulab-smu.top/biomedical-knowledge-mining-book/index.html).
+
+## Cell deconvolution
+
+* **[Bisque](https://rdrr.io/github/cozygene/bisque/)**: This package provides tools to estimate cell type abundances from heterogenous bulk RNA expression datasets. A reference-based method utilizes single-cell information to generate a signature matrix and transformation of bulk expression for accurate regression based estimates. A marker-based method utilizes known cell-specific marker genes to measure relative abundances across samples. Its performance is benchmarked in a paper found [here](https://www.nature.com/articles/s41467-020-19015-1), and it can be downloaded from the authors' [GitHub page](https://github.com/cozygene/bisque/).
+
+## Ligand-receptor pairs
+
+A review and comparison of current methods and resources for cell-cell communication inference from single-cell RNASeq data can be found [here](https://www.nature.com/articles/s41467-022-30755-0).
+
+* **[CellChat](https://rdrr.io/github/sqjin/CellChat/)**: This tool attempts to infer, visualise, and analyse cell-cell communication networks from scRNASeq and spatial imaging data.
+
+* **[LIANA](https://rdrr.io/github/saezlab/liana/)**: This tool enables the use of any combination of ligand-receptor methods and resources, and their consensus (i.e. the determined average of up to all 7 methods). It is the tool proposed in the [review](https://www.nature.com/articles/s41467-022-30755-0) above. The tools it combines are [CellPhoneDBv2](https://github.com/Teichlab/cellphonedb), [CellChat](https://github.com/sqjin/CellChat), [NATMI](https://github.com/forrest-lab/NATMI), [Connectome](https://github.com/msraredon/Connectome), [SingleCellSignalR](https://github.com/SCA-IRCM/SingleCellSignalR), [iTALK](https://github.com/Coolgenome/iTALK)-inspired 1-vs-rest logFC score, [CytoTalk](https://advances.sciencemag.org/content/7/16/eabf1356)-inspired cross-talk scores, and the `consensus_rank` of the prediction is provided using the `RobustRankAggregate` method. In essence, LIANA decouples the respective methods from their resources, and allows a combination to harness the power of each, but also aims to mitigate the differences between resources to provide a consensus score. A tutorial can be found [here](https://saezlab.github.io/liana/articles/liana_tutorial.html).<br><div align="center"><img src="./assets/liana_img.png"></div>
+
+## Co-expression networks
+
+* **[WGCNA](https://horvath.genetics.ucla.edu/html/CoexpressionNetwork/Rpackages/WGCNA/)**: WGCNA stands for "weight gene co-expression network analysis". Weighted correlation network analysis can be used for finding clusters (modules) of highly-correlated genes. This package provides functions for network construction, module detection, gene selection, calculations of topological properties, data simulation, visualisation, and interfacing with external software. A comprehensive set of tutorials can be found on the package website.
+
+* **[MEGENA](https://rdrr.io/cran/MEGENA/)**: MEGENA stands for "multiscale embedded gene co-expression network analysis". It can effectively and efficiently construct and analyse large-scale planar filtered co-expression networks. Embedded network construction can be run in parallel, and it can identify multi-scale clustering structures. It showed some improvement over WGCNA in the released [manuscript](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004574). A small tutorial can be found [here](https://rpubs.com/grrompala/656670), in addition to the one found in the vignette [here](https://cran.r-project.org/web/packages/MEGENA/vignettes/MEGENA_pipeline_10062016.html).
 
 ## Data visualisation
 
